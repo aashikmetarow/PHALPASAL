@@ -1,0 +1,952 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffbd00">
+  <meta name="description" content="Browse fresh fruit for everyday meals at PhalPasal, with fruit picks available across Kathmandu Valley.">
+
+  <link rel="icon" type="image/png" href="phal-pasal-icon.png">
+
+  <title>PhalPasal | Fresh Fruits</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="banana.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="site-header">
+  <div class="header-inner">
+
+    <a class="brand" href="#home" aria-label="PhalPasal home">
+      <span class="brand-name"><span>PHAL</span><span>PASAL</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#categories" class="nav-link">Categories</a>
+      <a href="#shop" class="nav-link">Shop</a>
+      <a href="#why" class="nav-link">About</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <label class="search-box">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Search fruits..." aria-label="Search fruits">
+      </label>
+
+      <button class="cart-trigger" id="openCart">
+        <span>🛒</span>
+        <span class="cart-label">Basket</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+
+<main id="home">
+
+  <!-- HERO SECTION -->
+  <section class="hero page-width">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        FRESH FRUITS, RIGHT HERE IN NEPAL
+      </div>
+
+      <h1>
+        Fresh fruit for<br>
+        <span>everyday meals.</span>
+      </h1>
+
+      <p>
+        Pick your favourite fruits and get them delivered around Kathmandu Valley.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="#shop" class="button button-dark">
+          Browse fruits <span>↗</span>
+        </a>
+
+        <a href="#categories" class="text-link">
+          See all categories →
+        </a>
+
+      </div>
+
+      <div class="hero-note">
+        <span>✳</span> Good fruit, without the fuss.
+      </div>
+
+    </div>
+
+    <!-- NEW HOMEPAGE IMAGE -->
+    <div class="hero-visual">
+      <img
+        src="homepage.png"
+        alt="Fresh apples, oranges, bananas, grapes and kiwi in a wooden fruit bowl"
+        class="hero-image"
+      >
+    </div>
+
+  </section>
+
+
+  <!-- BENEFITS -->
+  <section class="benefits page-width">
+
+    <div class="benefit">
+      <span class="benefit-icon">🌱</span>
+      <div>
+        <strong>Fresh stock</strong>
+        <small>Selected for quality</small>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <span class="benefit-icon">🚚</span>
+      <div>
+        <strong>Local delivery</strong>
+        <small>Kathmandu Valley</small>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <span class="benefit-icon">♡</span>
+      <div>
+        <strong>Good quality</strong>
+        <small>Handled with care</small>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section class="section page-width" id="categories">
+
+    <div class="section-heading">
+
+      <div>
+        <span class="section-kicker">FIND WHAT YOU NEED</span>
+        <h2>Browse categories<span>.</span></h2>
+        <p>Choose a fruit category to get started.</p>
+      </div>
+
+      <button class="plain-link" id="showAll">
+        View all fruits →
+      </button>
+
+    </div>
+
+    <div class="category-grid">
+
+      <button class="category-card active" data-category="all">
+        <span class="category-art art-all">🍎 🍌 🍊</span>
+        <span class="category-name">All fruits</span>
+        <small>All the goodness</small>
+      </button>
+
+      <button class="category-card" data-category="himalayan">
+        <span class="category-art art-hill">🍎 🍐 🥝</span>
+        <span class="category-name">Himalayan picks</span>
+        <small>From the hills</small>
+      </button>
+
+      <button class="category-card" data-category="everyday">
+        <span class="category-art art-everyday">🍌 🥥 🍍</span>
+        <span class="category-name">Everyday fruits</span>
+        <small>Daily favourites</small>
+      </button>
+
+      <button class="category-card" data-category="seasonal">
+        <span class="category-art art-seasonal">🍉 🥭 🍈</span>
+        <span class="category-name">Seasonal fruits</span>
+        <small>Fresh seasonal picks</small>
+      </button>
+
+      <button class="category-card" data-category="citrus">
+        <span class="category-art art-citrus">🍊 🍋 🍇</span>
+        <span class="category-name">Citrus & berries</span>
+        <small>Sweet and juicy</small>
+      </button>
+
+      <button class="category-card" data-category="exotic">
+        <span class="category-art art-exotic">🥝 🫐 🍍</span>
+        <span class="category-name">Exotic fruits</span>
+        <small>Something special</small>
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <section class="section page-width shop-section" id="shop">
+
+    <div class="section-heading">
+
+      <div>
+        <span class="section-kicker">FROM OUR FRUIT LIST</span>
+        <h2 id="productsHeading">Available fruits<span>.</span></h2>
+        <p id="productsSubheading">Take a look at what is available.</p>
+      </div>
+
+      <span class="result-count" id="resultCount">13 fruits listed</span>
+
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <p class="no-results" id="noResults" hidden>
+      No matching fruits. Try a different name.
+    </p>
+
+  </section>
+
+
+  <!-- PROMOTIONAL BANNER -->
+  <section class="season-banner page-width">
+
+    <div class="banner-content">
+
+      <span class="section-kicker">SOMETHING FOR THE TABLE</span>
+
+      <h2>
+        Bring home<br>
+        fresh fruit.
+      </h2>
+
+      <p>
+        Choose a few favourites for home, or send some to someone you care about.
+      </p>
+
+      <a href="#shop" class="button button-light">
+        Browse fruits ↗
+      </a>
+
+    </div>
+
+    <div class="banner-fruits">
+      <span>🍎</span>
+      <span>🍊</span>
+      <span>🍇</span>
+      <span>🍌</span>
+      <span>🥝</span>
+    </div>
+
+    <div class="banner-circle"></div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section page-width why-section" id="why">
+
+    <div class="section-heading">
+
+      <div>
+        <span class="section-kicker">ABOUT PHALPASAL</span>
+        <h2>Fruit shopping made simple<span>.</span></h2>
+        <p>We want it to be easy to find and order everyday fruits.</p>
+      </div>
+
+    </div>
+
+    <div class="why-grid">
+
+      <article class="why-card">
+        <span class="why-number">01</span>
+        <div class="why-emoji">🏔️</div>
+        <h3>Local fruit options</h3>
+        <p>We include fruits grown in Nepal, along with other popular choices.</p>
+      </article>
+
+      <article class="why-card">
+        <span class="why-number">02</span>
+        <div class="why-emoji">🤲</div>
+        <h3>A careful selection</h3>
+        <p>We pay attention to the condition of the fruits we list.</p>
+      </article>
+
+      <article class="why-card">
+        <span class="why-number">03</span>
+        <div class="why-emoji">💛</div>
+        <h3>Delivered to your door</h3>
+        <p>Your order is packed before delivery in our service area.</p>
+      </article>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-inner page-width">
+
+    <a href="#home" class="footer-brand">
+      <span class="brand-name"><span>PHAL</span><span>PASAL</span></span>
+    </a>
+
+    <p>Fresh fruit for everyday meals. Naturally.</p>
+
+    <a href="#home" class="back-top">Back to top ↑</a>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 PhalPasal · फलपसल. Kathmandu, Nepal.</span>
+    <p class="footer-credit">
+      <span class="footer-credit-label">Made by</span>
+      <a class="footer-credit-name"
+        href="https://www.instagram.com/aashik_metarow/"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Aasish Ghimire on Instagram (opens in a new tab)">Aasish Ghimire</a>
+      <span class="footer-credit-divider" aria-hidden="true">|</span>
+      <a class="footer-credit-name"
+        href="https://www.instagram.com/rabinghimire180/"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Rabin Ghimire on Instagram (opens in a new tab)">Rabin Ghimire</a>
+      <span class="footer-credit-divider" aria-hidden="true">|</span>
+      <a class="footer-credit-name"
+        href="https://www.instagram.com/suyansha__/"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Suyansha Khadka on Instagram (opens in a new tab)">Suyansha Khadka</a>
+    </p>
+  </div>
+
+</footer>
+
+
+<!-- CART OVERLAY -->
+<div class="drawer-overlay" id="overlay"></div>
+
+
+<!-- CART DRAWER -->
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+
+  <div class="drawer-header">
+
+    <div>
+      <span class="section-kicker">YOUR BASKET</span>
+      <h2>Your basket</h2>
+    </div>
+
+    <button class="close-button" id="closeCart" aria-label="Close basket">×</button>
+
+  </div>
+
+  <div class="cart-body" id="cartBody">
+
+    <div class="empty-cart">
+      <span>🧺</span>
+      <h3>Your basket is empty</h3>
+      <p>Add a fruit and it will show up here.</p>
+    </div>
+
+  </div>
+
+  <div class="drawer-footer">
+
+    <div class="total-row">
+      <span>Subtotal</span>
+      <strong>रु <span id="cartTotal">0</span></strong>
+    </div>
+
+    <button class="button button-dark checkout-button" id="checkoutBtn">
+      Continue to checkout →
+    </button>
+
+    <small>Delivery charges calculated at checkout.</small>
+
+  </div>
+
+</aside>
+
+<dialog class="product-modal" id="productModal" aria-labelledby="productModalName">
+  <div class="product-modal-layout">
+
+    <button class="product-modal-close" id="closeProductModal" type="button" aria-label="Close fruit details">×</button>
+
+    <div class="product-modal-image product-himalayan" id="productModalImageFrame">
+      <img id="productModalImage" src="" alt="">
+      <span class="product-modal-tag" id="productModalTag"></span>
+    </div>
+
+    <div class="product-modal-info">
+      <span class="section-kicker">A CLOSER LOOK</span>
+      <h2 id="productModalName"></h2>
+      <span class="product-modal-nepali" id="productModalNepali"></span>
+      <p class="product-modal-description" id="productModalDescription"></p>
+
+      <section class="nutrition-panel" aria-labelledby="nutritionHeading">
+        <h3 id="nutritionHeading">Nutrient highlights</h3>
+        <ul class="nutrition-list" id="productModalNutrients"></ul>
+        <p class="nutrition-note">Highlights are general; nutrient amounts vary with fruit size, ripeness, and serving.</p>
+      </section>
+
+      <div class="product-modal-price">
+        <span id="productModalUnit"></span>
+        <strong id="productModalPrice"></strong>
+      </div>
+
+      <button class="button button-dark product-modal-add" id="productModalAdd" type="button" disabled>
+        Add to basket
+      </button>
+    </div>
+
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+
+<script>
+const products = [
+
+  {id:1,name:"Mustang Apples",nepali:"मुस्ताङ स्याउ",price:220,unit:"1 kg",image:"fruits/apples.webp",category:"himalayan",tag:"Farm favourite",description:"Crisp with a sweet-tart bite. Slice one for breakfast or enjoy it as an easy snack.",nutrients:["Dietary fiber","Vitamin C","Potassium"]},
+
+  {id:2,name:"Sweet Bananas",nepali:"केरा",price:120,unit:"1 dozen",image:"fruits/sweet bananas.webp",category:"everyday",tag:"Daily pick",description:"Soft and naturally sweet when ripe. A simple snack, or an easy addition to breakfast.",nutrients:["Potassium","Vitamin B6","Dietary fiber"]},
+
+  {id:3,name:"Sweet Oranges",nepali:"सुन्तला",price:160,unit:"1 kg",image:"fruits/sweet oranges.webp",category:"citrus",tag:"Juicy",description:"Fragrant citrus with a juicy, sweet-tangy finish. Peel and enjoy fresh.",nutrients:["Vitamin C","Folate","Dietary fiber"]},
+
+  {id:4,name:"Green Kiwi",nepali:"किवी",price:280,unit:"500 g",image:"fruits/kiwi.webp",category:"himalayan",tag:"Hill grown",description:"A bright sweet-tart flavor and tender center. Cut in half or add slices to a fruit bowl.",nutrients:["Vitamin C","Vitamin K","Dietary fiber"]},
+
+  {id:5,name:"Sweet Mangoes",nepali:"आँप",price:180,unit:"1 kg",image:"fruits/mangoes.webp",category:"seasonal",tag:"Seasonal",description:"Fragrant and juicy when ripe, with smooth flesh that is lovely on its own or sliced.",nutrients:["Vitamin C","Vitamin A","Folate"]},
+
+  {id:6,name:"Watermelon",nepali:"तरबुजा",price:95,unit:"1 kg",image:"fruits/watermelon.webp",category:"seasonal",tag:"Refreshing",description:"Cool, crisp and gently sweet. Chill it, slice it, and enjoy a refreshing bite.",nutrients:["Vitamin C","Vitamin A","Lycopene"]},
+
+  {id:7,name:"Fresh Grapes",nepali:"अंगुर",price:240,unit:"500 g",image:"fruits/grapes.webp",category:"citrus",tag:"Sweet & fresh",description:"Little pops of sweet-tart flavor. Enjoy by the handful or serve chilled.",nutrients:["Vitamin K","Copper","Potassium"]},
+
+  {id:8,name:"Pineapple",nepali:"भुइँकटहर",price:180,unit:"1 piece",image:"fruits/pineapple.webp",category:"everyday",tag:"Tropical",description:"A bright tropical aroma with a juicy sweet-tart bite. Slice into wedges or add to fruit salad.",nutrients:["Vitamin C","Manganese","Dietary fiber"]},
+
+  {id:9,name:"Pahadi Pears",nepali:"नास्पाती",price:200,unit:"1 kg",image:"fruits/pears.webp",category:"himalayan",tag:"From the hills",description:"Mildly sweet and delicate, with a juicy crunch when firm or a softer bite when ripe.",nutrients:["Dietary fiber","Vitamin C","Potassium"]},
+
+  {id:10,name:"Fresh Lemons",nepali:"कागती",price:100,unit:"500 g",image:"fruits/lemons.webp",category:"citrus",tag:"Zesty",description:"Sharp citrus juice and fragrant zest bring a fresh lift to drinks and everyday cooking.",nutrients:["Vitamin C","Folate"]},
+
+  {id:11,name:"Blueberries",nepali:"ब्लुबेरी",price:450,unit:"125 g",image:"fruits/blueberries.webp",category:"exotic",tag:"Special pick",description:"Small berries with a sweet-tart burst. Enjoy by the handful or add to breakfast and desserts.",nutrients:["Vitamin C","Vitamin K","Manganese","Dietary fiber"]},
+
+  {id:13,name:"Papaya",nepali:"मेवा",price:130,unit:"1 kg",image:"fruits/papaya.webp",category:"seasonal",tag:"Fresh pick",description:"Tender and gently sweet when ripe, with a mellow tropical flavor. Nice served chilled.",nutrients:["Vitamin C","Vitamin A","Folate"]},
+
+  {id:14,name:"Coconut",nepali:"नरिवल",price:150,unit:"1 piece",image:"fruits/coconut.webp",category:"everyday",tag:"Naturally good",description:"Distinctive coconut aroma and a satisfying bite. Enjoy as a snack or use in cooking.",nutrients:["Dietary fiber","Manganese","Copper"]}
+
+];
+
+
+const cart = {};
+
+const productGrid = document.getElementById("productGrid");
+const cartDrawer = document.getElementById("cartDrawer");
+const overlay = document.getElementById("overlay");
+const toast = document.getElementById("toast");
+const productModal = document.getElementById("productModal");
+const productModalAdd = document.getElementById("productModalAdd");
+let selectedProduct = null;
+
+let activeCategory = "all";
+let searchTerm = "";
+let toastTimer;
+let revealObserver = null;
+
+
+const categoryNames = {
+  himalayan:"Himalayan picks",
+  everyday:"Everyday fruits",
+  seasonal:"Seasonal fruits",
+  citrus:"Citrus & berries",
+  exotic:"Exotic fruits"
+};
+
+
+function renderProducts() {
+
+  if (revealObserver) {
+    productGrid.querySelectorAll(".product-card").forEach(card => {
+      revealObserver.unobserve(card);
+    });
+  }
+
+  const filtered = products.filter(p => {
+
+    const matchesCategory =
+      activeCategory === "all" || p.category === activeCategory;
+
+    const matchesSearch =
+      p.name.toLowerCase().includes(searchTerm) ||
+      p.nepali.includes(searchTerm);
+
+    return matchesCategory && matchesSearch;
+  });
+
+
+  productGrid.innerHTML = filtered.map(p => `
+
+    <article class="product-card">
+
+      <div class="product-image product-${p.category}">
+
+        <span class="product-tag">${p.tag}</span>
+
+        <button class="product-detail-trigger" type="button"
+          aria-label="View details and nutrients for ${p.name}" aria-haspopup="dialog">
+          <img
+            class="product-photo"
+            src="${p.image}"
+            alt=""
+            loading="lazy"
+            onerror="this.classList.add('image-error')"
+          >
+        </button>
+
+        <div class="product-details">
+          <strong>${p.name}</strong>
+          <p>${p.description}</p>
+        </div>
+
+        <button class="quick-add" onclick="addToCart(${p.id})"
+          aria-label="Add ${p.name}">+</button>
+
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-title-row">
+          <h3>${p.name}</h3>
+          <span class="product-price">रु ${p.price}</span>
+        </div>
+
+        <p class="product-nepali">${p.nepali}</p>
+
+        <div class="product-bottom">
+          <span>${p.unit}</span>
+
+          <button class="add-button" onclick="addToCart(${p.id})">
+            Add to basket <span>+</span>
+          </button>
+        </div>
+
+      </div>
+
+    </article>
+
+  `).join("");
+
+  productGrid.querySelectorAll(".product-card").forEach((card, index) => {
+    const product = filtered[index];
+
+    if (revealObserver) {
+      card.classList.add("reveal");
+      card.style.setProperty("--reveal-delay", `${(index % 4) * 70}ms`);
+      revealObserver.observe(card);
+    }
+
+    const detailTrigger = card.querySelector(".product-detail-trigger");
+    detailTrigger.addEventListener("click", () => openProductDetails(product));
+
+    card.addEventListener("click", event => {
+      if (!event.target.closest("button")) {
+        openProductDetails(product);
+      }
+    });
+
+    card.addEventListener("pointermove", event => {
+      if (event.pointerType !== "mouse" ||
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+      }
+
+      const bounds = card.getBoundingClientRect();
+      const horizontal = (event.clientX - bounds.left) / bounds.width - .5;
+      const vertical = (event.clientY - bounds.top) / bounds.height - .5;
+
+      card.style.setProperty("--tilt-x", `${-vertical * 6}deg`);
+      card.style.setProperty("--tilt-y", `${horizontal * 6}deg`);
+    });
+
+    card.addEventListener("pointerleave", () => {
+      card.style.removeProperty("--tilt-x");
+      card.style.removeProperty("--tilt-y");
+    });
+  });
+
+  document.getElementById("noResults").hidden = filtered.length !== 0;
+
+  document.getElementById("resultCount").textContent =
+    `${filtered.length} fresh picks`;
+
+  document.getElementById("productsHeading").innerHTML =
+    (activeCategory === "all" ? "Available fruits" : categoryNames[activeCategory]) +
+    '<span>.</span>';
+
+  document.getElementById("productsSubheading").textContent =
+    searchTerm ? `Search results for "${searchTerm}"` :
+    "Take a look at what is available.";
+
+}
+
+function openProductDetails(product) {
+
+  selectedProduct = product;
+
+  const imageFrame = document.getElementById("productModalImageFrame");
+  const image = document.getElementById("productModalImage");
+
+  imageFrame.className = `product-modal-image product-${product.category}`;
+  image.src = product.image;
+  image.alt = product.name;
+  document.getElementById("productModalTag").textContent = product.tag;
+  document.getElementById("productModalName").textContent = product.name;
+  document.getElementById("productModalNepali").textContent = product.nepali;
+  document.getElementById("productModalDescription").textContent = product.description;
+  document.getElementById("productModalUnit").textContent = product.unit;
+  document.getElementById("productModalPrice").textContent = `रु ${product.price}`;
+  document.getElementById("productModalNutrients").innerHTML =
+    product.nutrients.map(nutrient => `<li>${nutrient}</li>`).join("");
+  productModalAdd.textContent = `Add to basket · रु ${product.price}`;
+  productModalAdd.disabled = false;
+
+  if (!productModal.open) {
+    productModal.showModal();
+  }
+
+  document.body.classList.add("product-modal-open");
+}
+
+
+function addToCart(id) {
+
+  cart[id] = (cart[id] || 0) + 1;
+
+  updateCart();
+
+  const product = products.find(p => p.id === id);
+
+  showToast(`${product.name} added to basket`);
+}
+
+
+function changeQty(id, amount) {
+
+  cart[id] = (cart[id] || 0) + amount;
+
+  if (cart[id] <= 0) {
+    delete cart[id];
+  }
+
+  updateCart();
+}
+
+
+function updateCart() {
+
+  const entries = Object.entries(cart);
+
+  const count = entries.reduce((sum, [,qty]) => sum + qty, 0);
+
+  const total = entries.reduce((sum, [id,qty]) =>
+    sum + products.find(p => p.id === Number(id)).price * qty, 0);
+
+  document.getElementById("cartCount").textContent = count;
+
+  const cartCount = document.getElementById("cartCount");
+  cartCount.classList.remove("pop");
+  void cartCount.offsetWidth;
+  cartCount.classList.add("pop");
+
+  document.getElementById("cartTotal").textContent =
+    total.toLocaleString("en-IN");
+
+
+  document.getElementById("cartBody").innerHTML = entries.length
+
+    ? entries.map(([id,qty]) => {
+
+        const p = products.find(item => item.id === Number(id));
+
+        return `
+
+          <div class="cart-item">
+
+            <img class="cart-item-photo" src="${p.image}" alt="${p.name}">
+
+            <div class="cart-item-info">
+
+              <strong>${p.name}</strong>
+
+              <small>रु ${p.price} · ${p.unit}</small>
+
+              <div class="quantity-control">
+
+                <button onclick="changeQty(${p.id},-1)">−</button>
+
+                <span>${qty}</span>
+
+                <button onclick="changeQty(${p.id},1)">+</button>
+
+              </div>
+
+            </div>
+
+            <strong class="line-total">रु ${p.price * qty}</strong>
+
+          </div>
+
+        `;
+
+      }).join("")
+
+    : `
+
+      <div class="empty-cart">
+        <span>🧺</span>
+        <h3>Your basket is empty</h3>
+        <p>Add a fruit and it will show up here.</p>
+      </div>
+
+    `;
+}
+
+
+function openCart() {
+
+  cartDrawer.classList.add("open");
+  overlay.classList.add("open");
+
+  cartDrawer.setAttribute("aria-hidden","false");
+
+  document.body.classList.add("drawer-open");
+}
+
+
+function closeCart() {
+
+  cartDrawer.classList.remove("open");
+  overlay.classList.remove("open");
+
+  cartDrawer.setAttribute("aria-hidden","true");
+
+  document.body.classList.remove("drawer-open");
+}
+
+
+function showToast(message) {
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2200);
+}
+
+
+// CATEGORY FILTERS
+
+document.querySelectorAll(".category-card").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    document.querySelectorAll(".category-card").forEach(card => {
+      card.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    activeCategory = button.dataset.category;
+
+    renderProducts();
+
+    document.getElementById("shop").scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+  });
+
+});
+
+
+// SHOW ALL PRODUCTS
+
+document.getElementById("showAll").addEventListener("click", () => {
+
+  activeCategory = "all";
+  searchTerm = "";
+
+  document.getElementById("searchInput").value = "";
+
+  document.querySelectorAll(".category-card").forEach(card => {
+    card.classList.toggle("active", card.dataset.category === "all");
+  });
+
+  renderProducts();
+
+  document.getElementById("shop").scrollIntoView({
+    behavior:"smooth"
+  });
+
+});
+
+
+// SEARCH
+
+document.getElementById("searchInput").addEventListener("input", event => {
+
+  searchTerm = event.target.value.trim().toLowerCase();
+
+  activeCategory = "all";
+
+  document.querySelectorAll(".category-card").forEach(card => {
+    card.classList.toggle("active", card.dataset.category === "all");
+  });
+
+  renderProducts();
+
+});
+
+
+// CART BUTTONS
+
+document.getElementById("openCart").addEventListener("click", openCart);
+
+document.getElementById("closeCart").addEventListener("click", closeCart);
+
+overlay.addEventListener("click", closeCart);
+
+document.getElementById("closeProductModal").addEventListener("click", () => {
+  productModal.close();
+});
+
+productModal.addEventListener("click", event => {
+  const bounds = productModal.getBoundingClientRect();
+  const clickedOutside =
+    event.clientX < bounds.left ||
+    event.clientX > bounds.right ||
+    event.clientY < bounds.top ||
+    event.clientY > bounds.bottom;
+
+  if (clickedOutside) {
+    productModal.close();
+  }
+});
+
+productModal.addEventListener("close", () => {
+  document.body.classList.remove("product-modal-open");
+  productModalAdd.disabled = true;
+  selectedProduct = null;
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && productModal.open) {
+    event.preventDefault();
+    productModal.close();
+  }
+});
+
+productModalAdd.addEventListener("click", () => {
+  const product = selectedProduct;
+
+  if (!product) {
+    return;
+  }
+
+  productModal.close();
+  addToCart(product.id);
+});
+
+
+// MOBILE MENU
+
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", () => {
+
+  const isOpen = menuToggle.classList.toggle("active");
+  mainNav.classList.toggle("menu-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+
+});
+
+document.querySelectorAll(".nav-link").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    mainNav.classList.remove("menu-open");
+    menuToggle.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open menu");
+
+  });
+
+});
+
+
+// CHECKOUT
+
+document.getElementById("checkoutBtn").addEventListener("click", () => {
+
+  const count = Object.values(cart).reduce((sum,qty) => sum + qty, 0);
+
+  if (count === 0) {
+    showToast("Your basket is empty. Add some fruits first.");
+    return;
+  }
+
+  showToast("Your basket is ready. Checkout is not connected yet.");
+
+});
+
+
+// INITIAL LOAD
+
+const revealElements = document.querySelectorAll(
+  ".benefits, .section-heading, .category-card, .season-banner, .why-card"
+);
+
+if ("IntersectionObserver" in window) {
+  revealElements.forEach(element => element.classList.add("reveal"));
+
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealElements.forEach(element => revealObserver.observe(element));
+}
+
+renderProducts();
+updateCart();
+
+</script>
+
+</body>
+</html>
